@@ -1,4 +1,6 @@
-﻿## Ray1Map
+## This is downstream of Ray1Map intended to make it functional for Jade Engine titles that are not Rayman related (BGE, BGE Demo, BGE:HD, PoP SoT/WW/T2T, King Kong, etc.) Below is the README for upstream.
+
+## Ray1Map
 <img alt="Logo" src="https://raw.githubusercontent.com/Adsolution/Ray1Map/master/Assets/WebGLTemplates/Ray1mapTemplate/img/ray1map_logo_transparent.png" width="600">
  
 Ray1Map is a map viewer/editor by RayCarrot, Droolie, Ryemanni and Adsolution with special thanks to PluMGMK for helping out with the project. The goal of the project is to support map viewing for all tile-based Rayman games, with focus on the Rayman 1 games.
