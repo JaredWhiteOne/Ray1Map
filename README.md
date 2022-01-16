@@ -1,4 +1,4 @@
-## This is downstream of Ray1Map intended to make it functional for Jade Engine titles that are not Rayman related (BGE, BGE Demo, BGE:HD, PoP SoT/WW/T2T, King Kong, etc.) Below is the README for upstream.
+## This is downstream of Ray1Map intended to make it functional for Jade Engine titles that are not Rayman related (BGE, BGE Demo, BGE:HD, PoP SoT/WW/T2T, King Kong, etc.) Below is the README for upstream. Contact me in the Rayman Modding discord as needed @WhiteTPoison#3155.
 
 ## Ray1Map
 <img alt="Logo" src="https://raw.githubusercontent.com/Adsolution/Ray1Map/master/Assets/WebGLTemplates/Ray1mapTemplate/img/ray1map_logo_transparent.png" width="600">
