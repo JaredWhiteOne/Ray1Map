@@ -44,5 +44,15 @@
         States_Spyro2_ChallengePortals,
 
         QuestItems,
+
+        Ice_PortraitPalettes,
+        Ice_PortraitTileMaps,
+        Ice_PortraitTileSetLengths,
+        Ice_PortraitTileSets,
+
+        Ice_Level3D_Palettes,
+        Ice_Level3D_MapLayers,
+        Ice_Level3D_TileSetLengths,
+        Ice_Level3D_TileSets,
     }
 }

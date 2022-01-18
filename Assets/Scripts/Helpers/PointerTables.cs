@@ -546,6 +546,16 @@ namespace Ray1Map
                         [Spyro_DefinedPointer.FontTileSet] = 0x08297044,
 
                         [Spyro_DefinedPointer.CutsceneMaps] = 0x081ae594,
+
+                        [Spyro_DefinedPointer.Ice_PortraitPalettes] = 0x081aeaa4,
+                        [Spyro_DefinedPointer.Ice_PortraitTileMaps] = 0x081aeb04,
+                        [Spyro_DefinedPointer.Ice_PortraitTileSetLengths] = 0x08061974,
+                        [Spyro_DefinedPointer.Ice_PortraitTileSets] = 0x081aea44,
+
+                        [Spyro_DefinedPointer.Ice_Level3D_Palettes] = 0x081aed48,
+                        [Spyro_DefinedPointer.Ice_Level3D_MapLayers] = 0x081aec38,
+                        [Spyro_DefinedPointer.Ice_Level3D_TileSets] = 0x081aed8c,
+                        [Spyro_DefinedPointer.Ice_Level3D_TileSetLengths] = 0x08061be8,
                     }.ToDictionary(x => x.Key, x => new Pointer(x.Value, romFile));
 
                 case GameModeSelection.SpyroSeasonIceUS:
@@ -557,6 +567,16 @@ namespace Ray1Map
                         [Spyro_DefinedPointer.FontTileSet] = 0x08276c50,
 
                         [Spyro_DefinedPointer.CutsceneMaps] = 0x081aaecc,
+
+                        [Spyro_DefinedPointer.Ice_PortraitPalettes] = 0x081ab3dc,
+                        [Spyro_DefinedPointer.Ice_PortraitTileMaps] = 0x081ab43c,
+                        [Spyro_DefinedPointer.Ice_PortraitTileSetLengths] = 0x080618b0,
+                        [Spyro_DefinedPointer.Ice_PortraitTileSets] = 0x081ab37c,
+
+                        //[Spyro_DefinedPointer.Ice_Level3D_Palettes] = ,
+                        //[Spyro_DefinedPointer.Ice_Level3D_MapLayers] = ,
+                        //[Spyro_DefinedPointer.Ice_Level3D_TileSets] = ,
+                        //[Spyro_DefinedPointer.Ice_Level3D_TileSetLengths] = ,
                     }.ToDictionary(x => x.Key, x => new Pointer(x.Value, romFile));
 
                 case GameModeSelection.SpyroSeasonIceJP:
@@ -568,6 +588,16 @@ namespace Ray1Map
                         [Spyro_DefinedPointer.FontTileSet] = 0x08279c50,
 
                         [Spyro_DefinedPointer.CutsceneMaps] = 0x081b06e4,
+
+                        [Spyro_DefinedPointer.Ice_PortraitPalettes] = 0x081b0b58,
+                        [Spyro_DefinedPointer.Ice_PortraitTileMaps] = 0x081b0bb8,
+                        [Spyro_DefinedPointer.Ice_PortraitTileSetLengths] = 0x08063614,
+                        [Spyro_DefinedPointer.Ice_PortraitTileSets] = 0x081b0af8,
+
+                        //[Spyro_DefinedPointer.Ice_Level3D_Palettes] = ,
+                        //[Spyro_DefinedPointer.Ice_Level3D_MapLayers] = ,
+                        //[Spyro_DefinedPointer.Ice_Level3D_TileSets] = ,
+                        //[Spyro_DefinedPointer.Ice_Level3D_TileSetLengths] = ,
                     }.ToDictionary(x => x.Key, x => new Pointer(x.Value, romFile));
 
                 case GameModeSelection.SpyroSeasonFlameEU:
