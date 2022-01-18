@@ -34,6 +34,9 @@ using System.Linq;
 using System.Text;
 using BinarySerializer;
 using UnityEngine;
+using System.Diagnostics;
+using System.Threading;
+using System.Reflection;
 
 namespace Ray1Map.Jade {
 	public class FBXExporter {
@@ -53,8 +56,9 @@ namespace Ray1Map.Jade {
 
 			await UniTask.CompletedTask;
 			System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.InvariantCulture;
-
+			
 			string outputFile = Path.Combine(outputPath, $"{gao.Key.Key:X8}_{gao.Export_FileBasename}.fbx");
+			string outputFileBinary = Path.Combine(outputPath + "/Binary", $"{gao.Key.Key:X8}_{gao.Export_FileBasename}.fbx");
 			var header = new FBXHeader();
 
 			StringBuilder sb2 = new StringBuilder();
@@ -69,6 +73,30 @@ namespace Ray1Map.Jade {
 				System.IO.File.Delete(outputFile);
 
 			System.IO.File.WriteAllText(outputFile, buildMesh);
+
+			ExportBinaryFBXAsync(outputFile, outputFileBinary);
+		}
+		public static void ExportBinaryFBXAsync(string asciiFilePath, string binaryFilePath)
+		{
+			try
+			{
+				Process myProcess = new Process();
+				myProcess.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+				myProcess.StartInfo.CreateNoWindow = true;
+				myProcess.StartInfo.UseShellExecute = false;
+				myProcess.StartInfo.FileName = "C:\\Windows\\system32\\cmd.exe";
+				string path = Path.Combine(Application.dataPath, "Plugins\\FbxFormatConverter.exe") + $" -c \"{asciiFilePath}\" -o \"{binaryFilePath}\" -binary";
+				myProcess.StartInfo.Arguments = "/c" + path;
+				myProcess.EnableRaisingEvents = true;
+				myProcess.Start();
+				myProcess.WaitForExit();
+				int ExitCode = myProcess.ExitCode;
+				UnityEngine.Debug.Log(ExitCode);
+			}
+			catch (Exception e)
+			{
+				UnityEngine.Debug.Log(e.Message);
+			}
 		}
 
 		#region Header
