@@ -465,7 +465,15 @@ namespace Ray1Map {
 								}
 								if(exportedObjectIDs.Contains(objectID)) continue;
 								exportedObjectIDs.Add(objectID);
-								if (o.Value != null) await FBXExporter.ExportFBXAsync(o.Value, outputDir);
+
+								if (!Directory.Exists(Path.Combine(outputDir, Path.GetFileName($"{o.Value.Offset.File.AbsolutePath}").Split('.')[0])))
+								{
+									Directory.CreateDirectory(Path.Combine(outputDir, Path.GetFileName($"{o.Value.Offset.File.AbsolutePath}").Split('.')[0]));
+								}
+								if (o.Value != null)
+								{
+									await FBXExporter.ExportFBXAsync(o.Value, Path.Combine(outputDir, Path.GetFileName($"{o.Value.Offset.File.AbsolutePath}").Split('.')[0]));
+								}
 							}
 						}
 					}

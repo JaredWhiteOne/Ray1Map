@@ -102,3 +102,12 @@ The following packages were updated:
   com.unity.ide.vscode from version 1.2.3 to 1.2.4
   com.unity.test-framework from version 1.1.24 to 1.1.29
   com.unity.textmeshpro from version 3.0.4 to 3.0.6
+
+=== Sat Jan 15 18:54:34 2022
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.cinemachine from version 2.6.3 to 2.7.8
+  com.unity.ide.rider from version 2.0.7 to 3.0.7
